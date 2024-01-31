@@ -1,7 +1,12 @@
 import React from 'react'
 import Pdata from "../Subcomponent/Pdata.json";
 
-export const Men_Women_Section = () => {
+export const Men_Women_Section = (props) => {
+
+   const addcart=()=>{
+      props.addcart1()
+  }
+  
    return (
       <div>
          <div class="fashion_section">
@@ -21,7 +26,7 @@ export const Men_Women_Section = () => {
                                              <p class="price_text">Price  <span style={{ color: " #262626;" }}>$ {da.price}</span></p>
                                              <div class="tshirt_img"><img src={da.image} /></div>
                                              <div class="btn_main">
-                                                <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                                <div class="buy_bt"><button onClick={addcart}>Buy Now</button></div>
                                                 <div class="seemore_bt"><a href="#">See More</a></div>
                                              </div>
                                           </div>

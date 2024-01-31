@@ -1,5 +1,7 @@
 import React from 'react'
 export const Electronic_section = () => {
+   
+
    return (
       <div>
          <div class="fashion_section">

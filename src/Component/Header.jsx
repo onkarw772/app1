@@ -1,6 +1,11 @@
 import React from 'react'
 
-export const Header = () => {
+export const Header = (props) => {
+   // const ca=()=>{
+   //    // props.addcart3(props.count)
+   // }
+
+
    return (
       <div>
 
@@ -12,7 +17,7 @@ export const Header = () => {
                      <div class="col-sm-12">
                         <div class="custom_menu">
                            <ul>
-                              <li><a href="#">Best Sellers</a></li>
+                              <li><a >Best Sellers</a></li>
                               <li><a href="#">Gift Ideas</a></li>
                               <li><a href="#">New Releases</a></li>
                               <li><a href="#">Today's Deals</a></li>
@@ -82,7 +87,7 @@ export const Header = () => {
                         <ul>
                            <li><a href="#">
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                              <span class="padding_10">Cart</span></a>
+                              <span class="padding_10" >Cart <input type="text"  /></span></a>
                            </li>
                            <li><a href="#">
                               <i class="fa fa-user" aria-hidden="true"></i>
