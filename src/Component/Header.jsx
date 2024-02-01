@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const Header = (props) => {
-   // const ca=()=>{
-   //    // props.addcart3(props.count)
-   // }
+
 
 
    return (
@@ -17,18 +16,17 @@ export const Header = (props) => {
                      <div class="col-sm-12">
                         <div class="custom_menu">
                            <ul>
-                              <li><a >Best Sellers</a></li>
-                              <li><a href="#">Gift Ideas</a></li>
-                              <li><a href="#">New Releases</a></li>
-                              <li><a href="#">Today's Deals</a></li>
-                              <li><a href="#">Customer Service</a></li>
+                              <li><a ><Link to='/'>Home</Link></a></li>
+                              <li><a ><Link to='/api'>API Data</Link></a></li>
+                              <li><a ><Link to='/tempMenWomen'>Man & Woman Fashion</Link></a></li>
+                              <li><a ><Link to='/electronic'>Electronic</Link></a></li>
+                              <li><a ><Link to='/jewlery'>Jewellery Accessories</Link></a></li>                             
                            </ul>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-
             <div class="logo_section">
                <div class="container">
                   <div class="row">
@@ -140,6 +138,7 @@ export const Header = (props) => {
          </div>
 
       </div>
+
       </div>
       
     

@@ -2,58 +2,37 @@ import React, { useState } from 'react'
 import { Electronic_section } from './Component/Electronic_section'
 import { Footer } from './Component/Footer'
 import { Header } from './Component/Header'
-import { Jewellery_Section } from './Component/Jewellery_Section'
 import { Men_Women_Section } from './Component/Men_Women_Section'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Master } from './Component/Master'
+import { Home } from './Component/Home'
+import { Jewellery_Section } from './Component/Jewellery_Section'
+import { TemplateMenWomenSection } from './Component/TemplateMenWomenSection'
 
 
 
 export const PHome = (props) => {
-  const [purchaceData, setPurchaceData] = useState([])
-  const [count, setcount] = useState(0);
-  const addcart2 = (a, b) => {
-    setPurchaceData([...purchaceData, {
-      title: a,
-      price: b,
-      qty: 1,
-      Mrp: a,
-      Discount: 0,
-      Gst: 0,
-    }])
 
-    const plus = () => {
-      setcount(Number(count) + 1);
-    }
-    const minus = () => {
-      setcount(Number(count) - 1);
-    }
-
-  };
-  console.log(purchaceData)
   return (
     <div>
-      <Header
-        addcart3={addcart2}
-      />
-      <div class="fashion_section">
-        <div id="main_slider" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container">
-                <h1 class="fashion_taital">Man & Woman Fashion</h1>
-                <div class="fashion_section_2">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Master selectedComponent={Home}/>}></Route>      
+          <Route path='/api' element={<Master selectedComponent={Men_Women_Section}/>}></Route>      
+          <Route path='/electronic' element={<Master selectedComponent={Electronic_section}/>}></Route>      
+          <Route path='/jewlery' element={<Master selectedComponent={Jewellery_Section}/>}></Route>      
+          <Route path='/tempMenWomen' element={<Master selectedComponent={TemplateMenWomenSection}/>}></Route>      
+        </Routes>
+      </BrowserRouter>
+    
+    
 
-                  <Men_Women_Section
-                    addcart1={addcart2}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Jewellery_Section />
-        <Electronic_section />
-        <Footer />
+
+        
+      
+    
+      
       </div>
-    </div>
+
   )
 }
