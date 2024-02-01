@@ -1,61 +1,35 @@
 import React, { useState } from 'react'
 
-export const Cart = () => {
-    var demoData = [
-        {
-            ProductName: "Sugar",
-            Mrp: 85,
-            SalePrice: 70,
-            Discount: 5,//5%
-            Gst: 3,//3%
-            Qty: 1,
-        },
-        {
-            ProductName: "Salt",
-            Mrp: 40,
-            SalePrice: 30,
-            Discount: 2,//2%
-            Gst: 4, //4%
-            Qty: 1,
-        },
-        {
-            ProductName: "CookingOil",
-            Mrp: 90,
-            SalePrice: 80,
-            Discount: 4,//5%
-            Gst: 5,//5%
-            Qty: 1,
-        }
-    ]
-
+export const Cart = (props) => {
+    const [d1, setd1] = useState([])
+   
     const DisAmmount = (i) => {
-        var total_ammount = (Number(demoData[i].Qty) * Number(demoData[i].SalePrice))
-        var dis_value = ((Number(total_ammount) * Number(demoData[i].Discount)) / 100)
+        var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
+        var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
 
         return dis_value
     }
     const RemAmmount = (i) => {
-        var total_ammount = (Number(demoData[i].Qty) * Number(demoData[i].SalePrice))
-        var dis_value = ((Number(total_ammount) * Number(demoData[i].Discount)) / 100)
+        var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
+        var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
 
         return (total_ammount - dis_value)
     }
     const GstAmmount = (i) => {
-        var total_ammount = (Number(demoData[i].Qty) * Number(demoData[i].SalePrice))
-        var dis_value = ((Number(total_ammount) * Number(demoData[i].Discount)) / 100)
+        var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
+        var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
         var rem_ammount = (Number(total_ammount) - Number(dis_value))
-        var gst_ammount = ((Number(rem_ammount) * Number(demoData[i].Gst)) / 100)
+        var gst_ammount = ((Number(rem_ammount) * Number(props.pd[i].Gst)) / 100)
         return gst_ammount
     }
     const [total, settotal] = useState(0)
 
     const TotalAmmount = (i) => {
-        var total_ammount = (Number(demoData[i].Qty) * Number(demoData[i].SalePrice))
-        var dis_value = ((Number(total_ammount) * Number(demoData[i].Discount)) / 100)
+        var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
+        var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
         var rem_ammount = (Number(total_ammount) - Number(dis_value))
-        var gst_ammount = ((Number(rem_ammount) * Number(demoData[i].Gst)) / 100)
-
-        return Math.round(gst_ammount + rem_ammount)
+        var gst_ammount = ((Number(rem_ammount) * Number(props.pd[i].Gst)) / 100)
+        return (gst_ammount + rem_ammount)
     }
     function confirma() {
         alert("Purchase Success")
@@ -65,29 +39,33 @@ export const Cart = () => {
 
     function plus(i) {
         setqty(quantity + 1)
-        demoData.splice(Number(i.target.value), 1,
+        props.pd.splice(Number(i.target.value), 1,
             {
                 ProductName: "CookingOil",
                 Mrp: 90,
-                SalePrice: 80,
+                price: 80,
                 Discount: 4,//5%
                 Gst: 5,//5%
-                Qty: 55,
+                qty: 55,
             })
-        console.log(demoData)
+        console.log(props.pd)
 
-        for (var j of demoData) {
-        
-            sett1(Number(t1) + Number(demoData[j].SalePrice))
-            alert(Number(demoData[j].SalePrice))
+        for (var j of props.pd) {
+
+            sett1(Number(t1) + Number(props.pd[j].price))
+            alert(Number(props.pd[j].price))
         }
 
     }
-    
+    function mius() {
+        setd1([props.pd])
+        console.log(props.pd);
+    }
+
     return (
         <div className='container'>
-            <h1>{t1}aaaa</h1>
-            <table border={1} className='cartTable'>
+
+            <table border={1} className='cartTable text-center'>
                 <tr>
                     <td>No.</td>
                     <td>Product Name</td>
@@ -103,19 +81,19 @@ export const Cart = () => {
                 </tr>
 
                 {
-                    demoData.map((data, index) => (
-                        <tr key={index}>
+                    props.pd.map((data, index) => (
+                        <tr>
                             <td>{Number(index) + 1}</td>
-                            <td>{data.ProductName}</td>
-                            <td><button className='bg-secondary p-1'>-</button>{data.Qty}<button value={index} onClick={plus} className='bg-secondary p-1'>+</button></td>
+                            <td>{data.title}</td>
+                            <td>{data.qty}</td>
                             <td>{data.Mrp}</td>
-                            <td>{data.SalePrice}</td>
+                            <td>{data.price}</td>
                             <td>{data.Discount}</td>
-                            <td>{DisAmmount(index) + " रु"}</td>
-                            <td>{RemAmmount(index) + " रु"}</td>
+                            <td>{DisAmmount(index)}</td>
+                            <td>{RemAmmount(index)}</td>
                             <td>{data.Gst}</td>
-                            <td>{GstAmmount(index) + " रु"}</td>
-                            <td>{TotalAmmount(index) + " रु"}</td>
+                            <td>{GstAmmount(index)}</td>
+                            <td>{TotalAmmount(index)}</td>
                         </tr>
                     ))
                 }
