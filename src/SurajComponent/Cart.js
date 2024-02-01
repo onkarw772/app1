@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export const Cart = (props) => {
     const [d1, setd1] = useState([])
-   
+  
     const DisAmmount = (i) => {
         var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
         var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
@@ -99,8 +99,8 @@ export const Cart = (props) => {
                 }
                 <tr>
                     <td colSpan={11}>
-                        <h2>Qty:{quantity}</h2>
-                        <h2>bill:{total}</h2>
+                        <h2>Qty:{props.qty}</h2>
+                        <h2>bill:{props.total}</h2>
 
                         <button onClick={confirma} className='bg-success p-2'>Confirm</button>
                     </td>

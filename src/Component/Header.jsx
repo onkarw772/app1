@@ -85,7 +85,7 @@ export const Header = (props) => {
                         <ul>
                            <li><a href="#">
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                              <span class="padding_10" ><Link to='/cart'>Cart</Link> <input type="text"  /></span></a>
+                              <span class="padding_10" ><Link to='/cart'>Cart | QTY : {props.qty}</Link> <input type="text"  /></span></a>
                            </li>
                            <li><a href="#">
                               <i class="fa fa-user" aria-hidden="true"></i>
