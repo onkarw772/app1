@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 export const Cart = (props) => {
     const [d1, setd1] = useState([])
+    const [total1,settotal1]=useState(0)
   
     const DisAmmount = (i) => {
         var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
@@ -29,6 +30,7 @@ export const Cart = (props) => {
         var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
         var rem_ammount = (Number(total_ammount) - Number(dis_value))
         var gst_ammount = ((Number(rem_ammount) * Number(props.pd[i].Gst)) / 100)
+       
         return (gst_ammount + rem_ammount)
     }
     function confirma() {
@@ -100,7 +102,7 @@ export const Cart = (props) => {
                 <tr>
                     <td colSpan={11}>
                         <h2>Qty:{props.qty}</h2>
-                        <h2>bill:{props.total}</h2>
+                        <h2>bill:{total1}</h2>
 
                         <button onClick={confirma} className='bg-success p-2'>Confirm</button>
                     </td>
