@@ -1,11 +1,13 @@
 
 import './App.css';
-import { Cart } from './SurajComponent/Cart';
+import { PHome } from './PHome';
 
 function App() {
   return (
-    <div className="App">
-      <Cart></Cart>
+    <div >
+      <PHome/>
+    
+    
     </div>
   );
 }
