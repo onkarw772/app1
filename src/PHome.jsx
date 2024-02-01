@@ -19,7 +19,14 @@ export const PHome = (props) => {
       Discount: 0,
       Gst: 0,
     }])
-    setcount(count + 1);
+
+    const plus = () => {
+      setcount(Number(count) + 1);
+    }
+    const minus = () => {
+      setcount(Number(count) - 1);
+    }
+
   };
   console.log(purchaceData)
   return (
@@ -38,18 +45,11 @@ export const PHome = (props) => {
                   <Men_Women_Section
                     addcart1={addcart2}
                   />
-
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
-
-
-
-
         <Jewellery_Section />
         <Electronic_section />
         <Footer />
