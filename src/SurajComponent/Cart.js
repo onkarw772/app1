@@ -4,7 +4,7 @@ export const Cart = () => {
     var demoData = [
         {
             ProductName: "Sugar",
-            Mrp: 80,
+            Mrp: 85,
             SalePrice: 70,
             Discount: 5,//5%
             Gst: 3,//3%
@@ -47,37 +47,46 @@ export const Cart = () => {
         var gst_ammount = ((Number(rem_ammount) * Number(demoData[i].Gst)) / 100)
         return gst_ammount
     }
-    const [total,settotal]=useState(0)
-    
+    const [total, settotal] = useState(0)
+
     const TotalAmmount = (i) => {
         var total_ammount = (Number(demoData[i].Qty) * Number(demoData[i].SalePrice))
         var dis_value = ((Number(total_ammount) * Number(demoData[i].Discount)) / 100)
         var rem_ammount = (Number(total_ammount) - Number(dis_value))
         var gst_ammount = ((Number(rem_ammount) * Number(demoData[i].Gst)) / 100)
-       
+
         return Math.round(gst_ammount + rem_ammount)
     }
     function confirma() {
         alert("Purchase Success")
     }
-    const [quantity,setqty]=useState(0)
-    function plus(i) {
-        setqty(quantity+1)
-        demoData.splice(Number(i.target.value),1,
-        {
-            ProductName: "CookingOil",
-            Mrp: 90,
-            SalePrice: 80,
-            Discount: 4,//5%
-            Gst: 5,//5%
-            Qty: 55,
-        })
-        console.log(demoData)
-    }
+    const [quantity, setqty] = useState(0)
+    const [t1, sett1] = useState(0)
 
+    function plus(i) {
+        setqty(quantity + 1)
+        demoData.splice(Number(i.target.value), 1,
+            {
+                ProductName: "CookingOil",
+                Mrp: 90,
+                SalePrice: 80,
+                Discount: 4,//5%
+                Gst: 5,//5%
+                Qty: 55,
+            })
+        console.log(demoData)
+
+        for (var j of demoData) {
+        
+            sett1(Number(t1) + Number(demoData[j].SalePrice))
+            alert(Number(demoData[j].SalePrice))
+        }
+
+    }
+    
     return (
         <div className='container'>
-          
+            <h1>{t1}</h1>
             <table border={1} className='cartTable'>
                 <tr>
                     <td>No.</td>
@@ -112,9 +121,9 @@ export const Cart = () => {
                 }
                 <tr>
                     <td colSpan={11}>
-                    <h2>Qty:{quantity}</h2>
-                    <h2>bill:{total}</h2>
-                  
+                        <h2>Qty:{quantity}</h2>
+                        <h2>bill:{total}</h2>
+
                         <button onClick={confirma} className='bg-success p-2'>Confirm</button>
                     </td>
                 </tr>
