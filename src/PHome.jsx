@@ -18,7 +18,7 @@ export const PHome = (props) => {
   const [total, settotal] = useState(0);
 
   const addcart2 = (a, b) => {
-   
+   alert("cart 2")
     settotal(Number(total) + Number(b))
     setcount(Number(count) + 1);
     setPurchaceData([...purchaceData, {
@@ -53,13 +53,6 @@ export const PHome = (props) => {
           <Route path='/cart' element={<Master total={total} qty={count} pd={purchaceData} selectedComponent={Cart} />}></Route>
         </Routes>
       </BrowserRouter>
-
-
-
-
-
-
-
 
     </div>
 
