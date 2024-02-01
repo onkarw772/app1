@@ -56,7 +56,8 @@ export const Home = () => {
                      <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search this blog"/>
                         <div class="input-group-append">
-                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                           <button class="btn btn-secondary" type="button" >
+                            {/* style={{background-color: "#f26522"; border-color:"#f26522 "}}> */}
                            <i class="fa fa-search"></i>
                            </button>
                         </div>
@@ -143,7 +144,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Man T -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -154,7 +155,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Man -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -165,7 +166,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Woman Scart</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color:" #262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -185,7 +186,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Man T -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -196,7 +197,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Man -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -207,7 +208,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Woman Scart</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -227,7 +228,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Man T -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -238,7 +239,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Man -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -249,7 +250,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Woman Scart</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <p class="price_text">Price  <span style={{color:" #262626;"}}>$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -282,7 +283,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/laptop-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -293,7 +294,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Mobile</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/mobile-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -304,7 +305,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Computers</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/computer-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -324,7 +325,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/laptop-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -335,7 +336,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Mobile</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/mobile-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -346,7 +347,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Computers</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/computer-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -366,7 +367,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/laptop-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -377,7 +378,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Mobile</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/mobile-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -388,7 +389,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Computers</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="electronic_img"><img src="images/computer-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -421,7 +422,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Jumkas</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -432,7 +433,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Necklaces</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -443,7 +444,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Kangans</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -463,7 +464,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Jumkas</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -474,7 +475,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Necklaces</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -485,7 +486,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Kangans</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -505,7 +506,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Jumkas</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -516,7 +517,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Necklaces</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color:" #262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -527,7 +528,7 @@ export const Home = () => {
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Kangans</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"/></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
