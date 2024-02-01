@@ -86,7 +86,7 @@ export const Cart = () => {
     
     return (
         <div className='container'>
-            <h1>{t1}</h1>
+            <h1>{t1}aaaa</h1>
             <table border={1} className='cartTable'>
                 <tr>
                     <td>No.</td>
