@@ -14,10 +14,10 @@ import { Cart } from './SurajComponent/Cart'
 
 export const PHome = (props) => {
   const [purchaceData, setPurchaceData] = useState([])
-  const [count, setcount] = useState(55);
+  const [count, setcount] = useState(0);
 
   const addcart2 = (a, b) => {
-   alert("qq")
+   
     setcount(Number(count) + 1);
     setPurchaceData([...purchaceData, {
       title: a,
@@ -43,11 +43,11 @@ export const PHome = (props) => {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Master selectedComponent={Home} />}></Route>
+          <Route path='/' element={<Master qty={count} addcart1={addcart2} selectedComponent={Home} />}></Route>
           <Route path='/api' element={<Master qty={count} addcart1={addcart2} selectedComponent={Men_Women_Section} />}></Route>
-          <Route path='/electronic' element={<Master selectedComponent={Electronic_section} />}></Route>
-          <Route path='/jewlery' element={<Master selectedComponent={Jewellery_Section} />}></Route>
-          <Route path='/tempMenWomen' element={<Master selectedComponent={TemplateMenWomenSection} />}></Route>
+          <Route path='/electronic' element={<Master qty={count} addcart1={addcart2} selectedComponent={Electronic_section} />}></Route>
+          <Route path='/jewlery' element={<Master qty={count} addcart1={addcart2} selectedComponent={Jewellery_Section} />}></Route>
+          <Route path='/tempMenWomen' element={<Master qty={count} addcart1={addcart2} selectedComponent={TemplateMenWomenSection} />}></Route>
           <Route path='/cart' element={<Master qty={count} pd={purchaceData} selectedComponent={Cart} />}></Route>
         </Routes>
       </BrowserRouter>

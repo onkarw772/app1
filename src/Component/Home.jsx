@@ -1,10 +1,10 @@
 import React from 'react'
 import { Men_Women_Section } from './Men_Women_Section'
 
-export const Home = () => {
+export const Home = (props) => {
    return (
       <div>
-         <Men_Women_Section />
+         <Men_Women_Section addcart1={props.addcart1}/>
 
          <div class="fashion_section">
             <div id="main_slider" class="carousel slide" data-ride="carousel">

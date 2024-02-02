@@ -4,7 +4,6 @@ import Pdata from "../Subcomponent/Pdata.json";
 export const Men_Women_Section = (props) => {
 
    const addcart = (i) => {
-      alert("cart1")
       props.addcart1(Pdata[i.target.value].title, Pdata[i.target.value].price)
    }
 
