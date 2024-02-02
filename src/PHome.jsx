@@ -14,12 +14,10 @@ import { Cart } from './SurajComponent/Cart'
 
 export const PHome = (props) => {
   const [purchaceData, setPurchaceData] = useState([])
-  const [count, setcount] = useState(0);
-  const [total, settotal] = useState(0);
+  const [count, setcount] = useState(55);
 
   const addcart2 = (a, b) => {
-   alert("cart 2")
-    settotal(Number(total) + Number(b))
+   alert("qq")
     setcount(Number(count) + 1);
     setPurchaceData([...purchaceData, {
       title: a,
@@ -50,9 +48,16 @@ export const PHome = (props) => {
           <Route path='/electronic' element={<Master selectedComponent={Electronic_section} />}></Route>
           <Route path='/jewlery' element={<Master selectedComponent={Jewellery_Section} />}></Route>
           <Route path='/tempMenWomen' element={<Master selectedComponent={TemplateMenWomenSection} />}></Route>
-          <Route path='/cart' element={<Master total={total} qty={count} pd={purchaceData} selectedComponent={Cart} />}></Route>
+          <Route path='/cart' element={<Master qty={count} pd={purchaceData} selectedComponent={Cart} />}></Route>
         </Routes>
       </BrowserRouter>
+
+
+
+
+
+
+
 
     </div>
 
