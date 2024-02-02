@@ -6,11 +6,14 @@ export const Jewellery_Section = () => {
     <div>
     <Demo></Demo>
          <div class="jewellery_section">
+         <Demo></Demo>
       <div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
+      
          <div class="carousel-inner">
             <div class="carousel-item active">
                <div class="container">
                   <h1 class="fashion_taital">Jewellery Accessories</h1>
+                  <button>hhhhhh</button>
                   <div class="fashion_section_2">
                      <div class="row">
                         <div class="col-lg-4 col-sm-4">
