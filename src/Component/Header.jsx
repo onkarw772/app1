@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Demo } from './Demo'
+
 
 export const Header = (props) => {
 
@@ -9,13 +11,13 @@ export const Header = (props) => {
       <div>
 
          <div class="banner_bg_main">
-
+         <Demo></Demo>
             <div class="container">
                <div class="header_section_top">
                   <div class="row">
                      <div class="col-sm-12">
                         <div class="custom_menu">
-                           <ul>
+                           <ul>                     
                               <li><a ><Link to='/'>Home</Link></a></li>
                               <li><a ><Link to='/api'>API Data</Link></a></li>
                               <li><a ><Link to='/tempMenWomen'>Man & Woman Fashion</Link></a></li>
@@ -74,6 +76,7 @@ export const Header = (props) => {
                         <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
                            <img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom" /> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
                         </a>
+                        
                         <div class="dropdown-menu ">
                            <a href="#" class="dropdown-item">
                               <img src="images/flag-france.png" class="mr-2" alt="flag" />

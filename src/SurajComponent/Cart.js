@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Demo } from '../Component/Demo'
 
 export const Cart = (props) => {
     const [d1, setd1] = useState([])
@@ -71,7 +72,7 @@ export const Cart = (props) => {
 
     return (
         <div className='container'>
-
+<Demo></Demo>
             <table border={1} className='cartTable text-center'>
                 <tr>
                     <td>No.</td>

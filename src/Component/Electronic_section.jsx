@@ -1,9 +1,11 @@
 import React from 'react'
+import { Demo } from './Demo'
 export const Electronic_section = () => {
    
 
    return (
       <div>
+      <Demo></Demo>
          <div class="fashion_section">
             <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner">

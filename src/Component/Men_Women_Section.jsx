@@ -1,5 +1,6 @@
 import React from 'react'
 import Pdata from "../Subcomponent/Pdata.json";
+import { Demo } from './Demo';
 
 export const Men_Women_Section = (props) => {
 
@@ -8,7 +9,11 @@ export const Men_Women_Section = (props) => {
    }
 
    return (
+      <div>
+      <Demo></Demo>
+   
       <div class="fashion_section">
+   
          <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                <div class="carousel-item active">
@@ -40,6 +45,6 @@ export const Men_Women_Section = (props) => {
             </div>
          </div>
       </div>
-
+      </div>
    )
 }

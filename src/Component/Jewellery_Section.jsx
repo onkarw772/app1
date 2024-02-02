@@ -1,8 +1,10 @@
 import React from 'react'
+import { Demo } from './Demo'
 
 export const Jewellery_Section = () => {
   return (
     <div>
+    <Demo></Demo>
          <div class="jewellery_section">
       <div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
          <div class="carousel-inner">
