@@ -23,9 +23,10 @@ export const Cart = (props) => {
         var gst_ammount = ((Number(rem_ammount) * Number(props.pd[i].Gst)) / 100)
         return gst_ammount
     }
-    const [total, settotal] = useState(0)
+  
 
     const TotalAmmount = (i) => {
+  
         var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
         var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
         var rem_ammount = (Number(total_ammount) - Number(dis_value))
@@ -54,7 +55,7 @@ export const Cart = (props) => {
 
         for (var j of props.pd) {
 
-            sett1(Number(t1) + Number(props.pd[j].price))
+            sett1(Number(t1) + Number(TotalAmmount(j)))
             alert(Number(props.pd[j].price))
         }
 
@@ -62,6 +63,10 @@ export const Cart = (props) => {
     function mius() {
         setd1([props.pd])
         console.log(props.pd);
+    }
+    const [total, settotal] = useState(0)
+    function aaa(){
+    alert("www")
     }
 
     return (
@@ -84,34 +89,28 @@ export const Cart = (props) => {
 
                 {
                     props.pd.map((data, index) => (
-                        <tr>
+                        <tr key={index}>
                             <td>{Number(index) + 1}</td>
                             <td>{data.title}</td>
                             <td>{data.qty}</td>
                             <td>{data.Mrp}</td>
                             <td>{data.price}</td>
                             <td>{data.Discount}</td>
-                            <td>{DisAmmount(index)}</td>
-                            <td>{RemAmmount(index)}</td>
+                            <td>{data.DisVal}</td>
+                            <td>{data.RemVal}</td>
                             <td>{data.Gst}</td>
-                            <td>{GstAmmount(index)}</td>
-                            <td>{TotalAmmount(index)}</td>
+                            <td>{data.GstVal}</td>
+                            <td>{data.TotalVal}</td>
                         </tr>
                     ))
                 }
                 <tr>
-                    <td colSpan={11}>
-                        <h2>Qty:{props.qty}</h2>
-                        <h2>bill:{total1}</h2>
-
-                        <button onClick={confirma} className='bg-success p-2'>Confirm</button>
-                    </td>
+                    <td  >Qty:{props.qty}</td>
+                    <td  >MRP:{Math.round(props.MRP)}</td>
+                    <td  >Total:{Math.round(props.total)}</td>
+                    <td ><button onClick={confirma} className='bg-success p-2'>Confirm</button> </td>    
                 </tr>
-
             </table>
-
-
-
         </div>
     )
 }
