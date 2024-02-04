@@ -71,6 +71,8 @@ export const Cart = (props) => {
     }
 
     return (
+
+        
         <div className='container'>
 <Demo></Demo>
             <table border={1} className='cartTable text-center'>
