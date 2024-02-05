@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Footer = () => {
    return (
-      <div><h1>hellow</h1>
+      <div>
 
          <div class="footer_section layout_padding">
             <div class="container">

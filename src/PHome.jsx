@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import { Electronic_section } from './Component/Electronic_section'
 import { Footer } from './Component/Footer'
 import { Header } from './Component/Header'
-import { Men_Women_Section } from './Component/Men_Women_Section'
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Master } from './Component/Master'
 import { Home } from './Component/Home'
 import { Jewellery_Section } from './Component/Jewellery_Section'
 import { TemplateMenWomenSection } from './Component/TemplateMenWomenSection'
 import { Cart } from './SurajComponent/Cart'
-import { Demo } from './Component/Demo'
+
+import { MWSection } from './Component/MWSection'
 
 
 
@@ -19,8 +20,6 @@ export const PHome = (props) => {
   const [total, settotal] = useState(0);
   const [MRP, setMRP] = useState(0);
   const [Discount, setDiscount] = useState(0);
-
-
   const addcart2 = (a, b) => {
     settotal(Number(total) + Number(((((Number(Number(b) - ((Number(b) * 10) / 100))) * 5) / 100) + (Number(b) - ((Number(b) * 10) / 100)))))
     setMRP(Number(MRP) + Number(b))
@@ -48,19 +47,18 @@ export const PHome = (props) => {
 
   };
 
-  // <Route path='/' element={<Master selectedComponent={Jewellery_Section}></Master>}></Route>
-
 
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} addcart1={addcart2} selectedComponent={Home} />}></Route>
-          <Route path='/api' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} addcart1={addcart2} selectedComponent={Men_Women_Section} />}></Route>
+          <Route path='/api' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} addcart1={addcart2} selectedComponent={MWSection} />}></Route>
+          <Route path='/tempMenWomen' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} addcart1={addcart2} selectedComponent={TemplateMenWomenSection} />}></Route>
           <Route path='/electronic' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} addcart1={addcart2} selectedComponent={Electronic_section} />}></Route>
           <Route path='/jewlery' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} addcart1={addcart2} selectedComponent={Jewellery_Section} />}></Route>
-          <Route path='/tempMenWomen' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} addcart1={addcart2} selectedComponent={TemplateMenWomenSection} />}></Route>
           <Route path='/cart' element={<Master Discount={Discount} MRP={MRP} total={total} qty={count} pd={purchaceData} selectedComponent={Cart} />}></Route>
+
         </Routes>
       </BrowserRouter>
 

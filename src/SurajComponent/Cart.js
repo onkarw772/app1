@@ -3,8 +3,8 @@ import { Demo } from '../Component/Demo'
 
 export const Cart = (props) => {
     const [d1, setd1] = useState([])
-    const [total1,settotal1]=useState(0)
-  
+    const [total1, settotal1] = useState(0)
+
     const DisAmmount = (i) => {
         var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
         var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
@@ -24,15 +24,15 @@ export const Cart = (props) => {
         var gst_ammount = ((Number(rem_ammount) * Number(props.pd[i].Gst)) / 100)
         return gst_ammount
     }
-  
+
 
     const TotalAmmount = (i) => {
-  
+
         var total_ammount = (Number(props.pd[i].qty) * Number(props.pd[i].price))
         var dis_value = ((Number(total_ammount) * Number(props.pd[i].Discount)) / 100)
         var rem_ammount = (Number(total_ammount) - Number(dis_value))
         var gst_ammount = ((Number(rem_ammount) * Number(props.pd[i].Gst)) / 100)
-       
+
         return (gst_ammount + rem_ammount)
     }
     function confirma() {
@@ -66,17 +66,15 @@ export const Cart = (props) => {
         console.log(props.pd);
     }
     const [total, settotal] = useState(0)
-    function aaa(){
-    alert("www")
-    }
+
 
     return (
 
-        
+
         <div className='container'>
-<Demo></Demo>
+
             <table border={1} className='cartTable text-center'>
-                <tr>
+                <tr className='bg-secondary text-light'>
                     <td>No.</td>
                     <td>Product Name</td>
                     <td>Qty</td>
@@ -93,25 +91,29 @@ export const Cart = (props) => {
                 {
                     props.pd.map((data, index) => (
                         <tr key={index}>
-                            <td>{Number(index) + 1}</td>
+                            <td >{Number(index) + 1}</td>
                             <td>{data.title}</td>
-                            <td>{data.qty}</td>
-                            <td>{data.Mrp}</td>
-                            <td>{data.price}</td>
-                            <td>{data.Discount}</td>
-                            <td>{data.DisVal}</td>
-                            <td>{data.RemVal}</td>
-                            <td>{data.Gst}</td>
-                            <td>{data.GstVal}</td>
-                            <td>{data.TotalVal}</td>
+                            <td >{data.qty}</td>
+                            <td >{data.Mrp}</td>
+                            <td >{data.price}</td>
+                            <td >{Math.round(data.Discount)}</td>
+                            <td >{Math.round(data.DisVal)}</td>
+                            <td >{Math.round(data.RemVal)}</td>
+                            <td >{Math.round(data.Gst)}</td>
+                            <td >{Math.round(data.GstVal)}</td>
+                            <td >{Math.round(data.TotalVal)}</td>
                         </tr>
                     ))
                 }
-                <tr>
-                    <td  >Qty:{props.qty}</td>
-                    <td  >MRP:{Math.round(props.MRP)}</td>
-                    <td  >Total:{Math.round(props.total)}</td>
-                    <td ><button onClick={confirma} className='bg-success p-2'>Confirm</button> </td>    
+
+            </table>
+            <table className='text-center'>
+                <tr className='bg-secondary text-light'>
+                    <td width={250} >Qty:{props.qty}</td>
+                    <td width={250} >MRP:{Math.round(props.MRP)}</td>
+                    <td width={250} >Discount:{Math.round(props.Discount)}</td>
+                    <td width={250} >Final Bill:{Math.round(props.total)}</td>
+                    <td width={250}><button onClick={confirma} className='bg-success p-2'>Confirm</button> </td>
                 </tr>
             </table>
         </div>

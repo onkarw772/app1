@@ -1,10 +1,10 @@
 import React from 'react'
-import { Demo } from './Demo'
+
 
 export const TemplateMenWomenSection = () => {
   return (
     <div>
-    <Demo></Demo>
+  
     <div class="fashion_section">
     <div id="main_slider" class="carousel slide" data-ride="carousel">
        <div class="carousel-inner">

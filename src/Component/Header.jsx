@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Demo } from './Demo'
+
 
 
 export const Header = (props) => {
@@ -11,7 +11,7 @@ export const Header = (props) => {
       <div>
 
          <div class="banner_bg_main">
-         <Demo></Demo>
+     
             <div class="container">
                <div class="header_section_top">
                   <div class="row">
